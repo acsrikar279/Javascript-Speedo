@@ -5,6 +5,7 @@ let time = currentLevel;
 let score = 0;
 let isPlaying;
 const difficulty = document.querySelector('#difficulty');
+const start = document.querySelector('#start');
 const dummy = document.querySelector('#dummy');
 const wordInput = document.querySelector('#word-input');
 const currentWord = document.querySelector('#current-word');
