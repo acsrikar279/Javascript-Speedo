@@ -1,10 +1,10 @@
 window.addEventListener('load', init);
-let currentLevel = 3;
+window.addEventListener('load',changeLevel);
+let currentLevel = 5;
 let time = currentLevel;
 let score = 0;
 let isPlaying;
 const difficulty = document.querySelector('#difficulty');
-let choice = difficulty.options[difficulty.selectedIndex].value;
 const dummy = document.querySelector('#dummy');
 const wordInput = document.querySelector('#word-input');
 const currentWord = document.querySelector('#current-word');
@@ -24,31 +24,6 @@ const words = [
   'fabulous',
   'tremendous',
   'hazardous',
-  'gluttony',
-  'scala',
-  'haskell',
-  'mongodb',
-  'android',
-  'ios',
-  'fantastic',
-  'great',
-  'speed',
-  'words',
-  'minute',
-  'quantum'
-];
-const hardwords = [
-  'amazing',
-  'javascript',
-  'python',
-  'cpp',
-  'java',
-  'sql',
-  'nosql',
-  'fabulous',
-  'tremendous',
-  'hazardous',
-  'gluttony',
   'scala',
   'haskell',
   'mongodb',
@@ -64,15 +39,24 @@ const hardwords = [
 function init() {
   seconds.innerHTML = currentLevel;
   showWord(words);
+  difficulty.addEventListener('change',changeLevel);
   wordInput.addEventListener('input', startMatch);
   setInterval(countdown, 1000);
   setInterval(checkStatus, 50);
-  dummy.innerHTML = choice;
+  // dummy.innerHTML = time + " init ";
+}
+function changeLevel() {
+  let choice = difficulty.options[difficulty.selectedIndex].value;
+  seconds.innerHTML = choice;
+  currentLevel = choice;
+  time = currentLevel;
+  // dummy.innerHTML = time + " changelevel ";
 }
 function startMatch() {
   if (matchWords()) {
     isPlaying = true;
-    time = currentLevel + 1;
+    time = Number(currentLevel) + 1;
+    // dummy.innerHTML = time + " startMatch ";
     showWord(words);
     wordInput.value = '';
     score++;
