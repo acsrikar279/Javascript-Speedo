@@ -35,7 +35,7 @@ const words = [
   'speed',
   'words',
   'minute',
-  'quantum'
+  'quantum',
 ];
 function init() {
   seconds.innerHTML = currentLevel;
