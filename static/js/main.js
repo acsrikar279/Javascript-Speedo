@@ -1,5 +1,5 @@
 window.addEventListener('load', init);
-window.addEventListener('load',changeLevel);
+window.addEventListener('load', changeLevel);
 let currentLevel = 5;
 let time = currentLevel;
 let score = 0;
@@ -37,15 +37,17 @@ const words = [
   'minute',
   'quantum',
 ];
+
 function init() {
   seconds.innerHTML = currentLevel;
   showWord(words);
-  difficulty.addEventListener('change',changeLevel);
+  difficulty.addEventListener('change', changeLevel);
   wordInput.addEventListener('input', startMatch);
   setInterval(countdown, 1000);
   setInterval(checkStatus, 50);
   // dummy.innerHTML = time + " init ";
 }
+
 function changeLevel() {
   let choice = difficulty.options[difficulty.selectedIndex].value;
   seconds.innerHTML = choice;
@@ -53,6 +55,7 @@ function changeLevel() {
   time = currentLevel;
   // dummy.innerHTML = time + " changelevel ";
 }
+
 function startMatch() {
   if (matchWords()) {
     isPlaying = true;
@@ -68,6 +71,7 @@ function startMatch() {
     scoreDisplay.innerHTML = score;
   }
 }
+
 function matchWords() {
   if (wordInput.value === currentWord.innerHTML) {
     message.innerHTML = 'Correct!!!';
@@ -77,10 +81,12 @@ function matchWords() {
     return false;
   }
 }
+
 function showWord(words) {
   const randIndex = Math.floor(Math.random() * words.length);
   currentWord.innerHTML = words[randIndex];
 }
+
 function countdown() {
   if (time > 0) {
     time--;
@@ -89,6 +95,7 @@ function countdown() {
   }
   timeDisplay.innerHTML = time;
 }
+
 function checkStatus() {
   if (!isPlaying && time === 0) {
     message.innerHTML = 'Game Over!!!';

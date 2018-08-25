@@ -13,54 +13,47 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-        <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="{% url 'index' %}">JS WordSpeedTest</a>
-      <div class="collapse navbar-collapse" id="navbar">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            </ul>
-        </div>
-    </nav>
+  <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+    <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbar"
+      aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="{% url 'index' %}">JS WordSpeedTest</a>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <div class="jumbotron">
     <h1>Instructions</h1>
-    <p>Type each word in the given amount of seconds to score. To play again, just type the current word. Your score
-    will reset</p>
+    <p>Type each word in the given amount of seconds to score. To play again, just type the current word. Your score will reset</p>
   </div>
-        <p id="dummy"></p>
-        <h4>Choose a difficulty</h5>
-        <select id="difficulty">
-          <option id="easy" value="5" selected="selected">Easy - 5 seconds</option>
-          <option id="medium" value="4" >Medium - 4 seconds</option>
-          <option id="hard" value="2" >Hard - 2 seconds</option>
-        </select>
-        <button class="btn btn-primary" id="start" >Start Game</button>
-        <p>Type The Given Word Within
-          <span id="seconds"></span> Seconds:</p>
-        <h2 id="current-word">hello</h2>
-        <input type="text" placeholder="Start typing..." id="word-input" >
-        <h4 id="message"></h4>
-
-        
-            <h3>Time Left:
-              <span id="time">0</span>
-            </h3>
-        
-         
-            <h3>Score:
-              <span id="score">0</span>
-            </h3>
-          
-            <!-- <a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank">Share on Facebook</a> -->
-       
-  <script src="static/js/main.js"></script>
+  <p id="dummy"></p>
+  <h4>Choose a difficulty</h5>
+    <select id="difficulty">
+      <option id="easy" value="5" selected="selected">Easy - 5 seconds</option>
+      <option id="medium" value="4">Medium - 4 seconds</option>
+      <option id="hard" value="2">Hard - 2 seconds</option>
+    </select>
+    <button class="btn btn-primary" id="start">Start Game</button>
+    <p>Type The Given Word Within
+      <span id="seconds"></span> Seconds:</p>
+    <h2 id="current-word">hello</h2>
+    <input type="text" placeholder="Start typing..." id="word-input">
+    <h4 id="message"></h4>
+    <h3>Time Left:
+      <span id="time">0</span>
+    </h3>
+    <h3>Score:
+      <span id="score">0</span>
+    </h3>
+    <script src="static/js/main.js"></script>
 </body>
 
 </html>
