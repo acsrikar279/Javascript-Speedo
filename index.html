@@ -10,6 +10,11 @@
   <script src="static/js/bootstrap.min.js"></script>
   <link href="static/css/bootstrap.min.css" rel="stylesheet">
   <link href="static/css/dashboard.css" rel="stylesheet">
+  <style>
+    .game {
+      margin-left: 50px;
+    }
+  </style>
 </head>
 
 <body>
@@ -32,28 +37,46 @@
   </nav>
   <div class="jumbotron">
     <h1>Instructions</h1>
-    <p>Type each word in the given amount of seconds to score. To play again, just type the current word. Your score will reset</p>
+    <ul>
+      <li>
+        <p>Type each word in the given amount of seconds to score. To play again, just type the current word. Your score will
+          reset</p>
+      </li>
+      <li>
+        <p>Please note that the timer starts as soon as the page loads. If it is showing game over, Type the correct word to
+          start it again.</p>
+      </li>
+    </ul>
+
   </div>
-  <p id="dummy"></p>
-  <h4>Choose a difficulty</h5>
-    <select id="difficulty">
-      <option id="easy" value="5" selected="selected">Easy - 5 seconds</option>
-      <option id="medium" value="4">Medium - 4 seconds</option>
-      <option id="hard" value="2">Hard - 2 seconds</option>
-    </select>
-    <button class="btn btn-primary" id="start">Start Game</button>
-    <p>Type The Given Word Within
-      <span id="seconds"></span> Seconds:</p>
-    <h2 id="current-word">hello</h2>
-    <input type="text" placeholder="Start typing..." id="word-input">
-    <h4 id="message"></h4>
-    <h3>Time Left:
-      <span id="time">0</span>
-    </h3>
-    <h3>Score:
-      <span id="score">0</span>
-    </h3>
-    <script src="static/js/main.js"></script>
+  <div class="row">
+    <div class="column"></div>
+    <div class="column"></div>
+  </div>
+  <div class="game">
+    <p id="dummy"></p>
+    <h4>Choose a difficulty</h5>
+      <select id="difficulty">
+        <option id="easy" value="5" selected="selected">Easy - 5 seconds</option>
+        <option id="medium" value="4">Medium - 4 seconds</option>
+        <option id="hard" value="2">Hard - 2 seconds</option>
+      </select>
+      <button class="btn btn-primary" id="start">Start Game</button>
+      <br/>
+      <p>Type The Given Word Within
+        <span id="seconds"></span> Seconds:</p>
+      <h2 id="current-word">hello</h2>
+      <input type="text" placeholder="Start typing..." id="word-input">
+      <br/>
+      <h4 id="message"></h4>
+      <h3>Time Left:
+        <span id="time">0</span>
+      </h3>
+      <h3>Score:
+        <span id="score">0</span>
+      </h3>
+  </div>
+  <script src="static/js/main.js"></script>
 </body>
 
 </html>
